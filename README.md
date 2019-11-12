@@ -29,7 +29,7 @@ So now you can clone this tutorial project:
 ```
 mkdir /prj
 cd /prj 
-git -c http.sslVerify=false clone https://github.com/NielsLiisberg/RPG-vsCode.git
+git -c http.sslVerify=false clone https://github.com/NielsLiisberg/RPG-vsCode-Getting-Started.git
 ````
 
 
