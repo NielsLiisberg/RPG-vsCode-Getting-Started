@@ -19,17 +19,17 @@ You need some open source tooling:
 
 Ssh into your IBM i:
 
-'''
+```
 Yum install git
 Yum install make-gnu 
-'''
+```
 So now you can clone this tutorial project:
 
-'''
+```
 mkdir /prj
 Cd /prj 
 Git clone git@github.com:NielsLiisberg/RPG-vsCode.git
-'''
+````
 
 
 # How vsCode works:
@@ -49,9 +49,9 @@ The task are using ssh – the secure shell. That requires a few configuration s
 
 On IBM i you need to have  the SSH daemon running: From a command line just run:
 
-'''
+```
 STRTCPSVR *SSHD
-'''
+```
 
 Now if you are working from windows you need a ssh client which can be either putty or the simply install the extra windows developer tools   
 
@@ -61,12 +61,8 @@ Gmake is a tool that solves dependencies and determins which files needs to be c
 
 If you open the makefile you will see that if a file with suffix .rpgle is detected by gmake to be recompiled, the it will end up in the the following command:
 
-'''
+```
 System “CRTBNDRPG ……”
-'''
+```
 
 All the commands in the make file are run by the qsh shell interpreater so if you need to run a native IBM I command, the system will  run this command  from within a separate  process.
-
-
-     
-
