@@ -20,15 +20,16 @@ You need some open source tooling:
 Ssh into your IBM i:
 
 ```
-Yum install git
-Yum install make-gnu 
+ssh myibmi
+yum install git
+yum install make-gnu 
 ```
-So now you can clone this tutorial project:
+So now you can fork this tutorial project:
 
 ```
 mkdir /prj
-Cd /prj 
-Git clone git@github.com:NielsLiisberg/RPG-vsCode.git
+cd /prj 
+git fork git@github.com:NielsLiisberg/RPG-vsCode.git
 ````
 
 
