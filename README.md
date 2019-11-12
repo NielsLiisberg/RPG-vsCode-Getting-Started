@@ -24,12 +24,12 @@ ssh myibmi
 yum install git
 yum install make-gnu 
 ```
-So now you can fork this tutorial project:
+So now you can clone this tutorial project:
 
 ```
 mkdir /prj
 cd /prj 
-git fork git@github.com:NielsLiisberg/RPG-vsCode.git
+git clone git@github.com:NielsLiisberg/RPG-vsCode.git
 ````
 
 
