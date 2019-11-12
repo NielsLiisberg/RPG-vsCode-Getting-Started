@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------- */
+/* Program . . . : Test                                          */
+/* Company . . . : System & Method A/S                           */
+/* Design  . . . : Niels Liisberg                                */
+/* Function  . . : put a message in the joblog                   */
+/*                                                               */
+/* By     Date       Fix     Beskrivelse                         ?*/
+/* NLI    12.11.2019 0000000 New program                         */
+/* ------------------------------------------------------------- */
+Pgm ()
+
+   Dcl &MsgId    *Char (7)
+   Dcl &MsgDta   *Char (100)
+   Dcl &Msgf     *Char (10)
+   Dcl &MsgfLib  *Char (10)
+   Dcl &MsgKey   *Char (4)
+
+  
+   /* Global Message monitor */
+   MonMsg     MsgId(Cpf0000) Exec(Goto Monitor)
+
+   /* My target application */
+   joblog text('Hello world')
+
+   Return
+
+/* ------------------------------------------------------------- */
+Monitor:
+   RcvMsg     MsgDTA(&MsgDTA) MsgID(&MsgID) MsgF(&MsgF) +
+              SndMsgFLib(&MsgFLib)
+   SndPgmMsg  MsgID(&MsgID) MsgF(&MsgFLib/&MsgF) +
+              MsgDTA(&MsgDTA) ToMsgQ(*Sysopr)
+EndPgm

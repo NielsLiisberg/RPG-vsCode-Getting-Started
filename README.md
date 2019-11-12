@@ -37,10 +37,12 @@ git -c http.sslVerify=false clone https://github.com/NielsLiisberg/RPG-vsCode-Ge
 
 You will see two important part of this project – the makefile and the .vsCode folder. Let me explain:
 
-.vscode is the folder that vsCode is using for housekeeping. It defines the so called workspace. 
-Always remember to open the workspace and not just open a file. The workspace make compilation possible since it contains information about the target IBM I and the commands to invoke the compiler.
+.vsCode is the "hidden" folder that vsCode is using for housekeeping. It defines the so called workspace. 
+Always remember to open the workspace and not just open a file. 
+The workspace make compilation possible since it contains information about 
+the target IBM i and the commands to invoke the compiler.
 
-I have prepares a .task file. This is the command you run when you compile along with a 
+I have prepared a *task.json* file. This is the command you run when you compile along with a 
 filter to get feedback to the IDE when you compile it is called a problem matcher which 
 basically is just a regular  expression that filter and rearrange theoutput from the ILE compilers.
 
